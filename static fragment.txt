@@ -1,0 +1,71 @@
+frag1
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8bbd0"
+    android:gravity="center"
+    tools:context=".frag1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="115dp"
+        android:layout_height="350dp"
+        android:text="upper fragment"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText"/>
+</FrameLayout>
+
+
+frag2
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b2ebf2"
+    android:gravity="center"
+    tools:context=".frag2">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="115dp"
+        android:layout_height="350dp"
+        android:text="lower fragment"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        tools:ignore="HardcodedText"/>
+</FrameLayout>
+
+
+main
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="409dp"
+    android:layout_height="729dp"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upper"
+        android:name="com.example.staticfragments.frag1"
+        tools:ignore="HardcodedText"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lower"
+        android:name="com.example.staticfragments.frag2"
+        tools:ignore="HardcodedText"/>
+
+</LinearLayout>
