@@ -1,0 +1,94 @@
+Mainactivity.java:
+package com.example.myapplicationact;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.util.Log;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d("lifecycle","onCreate invoked");
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("lifecycle","onStart invoked");
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("lifecycle","onResume invoked");
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("lifecycle","onPause invoked");
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("lifecycle","onStop invoked");
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("lifecycle","onRestart invoked");
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("lifecycle","onDestroy invoked");
+    }
+}
+
+
+Output:
+
+Step1: Run the Program and launch your Activity in emulator
+
+
+
+Step2:
+Now see on the logcat: onCreate, onStart and onResume methods are invoked.
+
+
+
+
+Step3:
+
+Now Click on the overview button of the emulator to stop the activity
+
+
+Step4:Once clicked note down the changes in emulator as well as in logcat window
+
+
+
+Step5: Again, Restart the Activity by selecting the present activity in the  emulator and note down the changes in Logcat window.
+Emulator: 
+
+
+
+Logcat:
+
+
+Step6: Again, click on the overview button of the emulator and remove the present activity and see the working of onDestroy() method 
+ 
+
+Memory usage:
+
+To check the memory usage,  click on the profiler and click on + and add present emulator
+
+
+
+Select your emulator and check the memory allocation 
+
+
+Now stop the activity and see the changes
+
+
+Finally delete the activity
